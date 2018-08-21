@@ -30,7 +30,7 @@ def won?(board)
         win_combination
       else
 
-        return nil
+        return []
       end
 
   end
