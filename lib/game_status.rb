@@ -32,3 +32,35 @@ def won?(board)
 
   end
 end
+
+def full?(board)
+  if board.all? {|index| index != " "}
+    true
+  else
+    false
+  end
+end
+
+def draw?(board)
+  if won?(board) && !full?(board)
+    false
+  elsif !won?(board) && full?(board)
+    true
+  else
+    false
+  end
+end
+
+def over?(board)
+  if won?(board) || full?(board) || draw?(board)
+    true
+  else
+    false
+  end
+end
+
+def winner(board)
+  if won?(board) == true
+    return board[won?(board)[0]]
+  end
+end
