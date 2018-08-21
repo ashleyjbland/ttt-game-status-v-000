@@ -60,7 +60,7 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board) == true
-    position_1
+  won?(board).detect do |winner|
+    "X" || "O"
   end
 end
