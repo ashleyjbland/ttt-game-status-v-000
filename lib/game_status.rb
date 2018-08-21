@@ -60,7 +60,7 @@ def over?(board)
 end
 
 def winner(board)
-  win_combination.detect do |winner|
+  won?(board).detect do |winner|
 
     (position_1 == "X" && position_2 == "X" && position_3 == "X") ||
       (position_1 == "O" && position_2 == "O" && position_3 == "O")
